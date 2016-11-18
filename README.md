@@ -3,7 +3,8 @@
 Stack (LIFO) Last In First Out. Code path "src/com/stack/" <br/>
 Queue (FIFO) First In First Out. Code path "src/com/queue/" <br/>
 <br/>
-Sorting (Code path "src/com/sorting/") :<br/>
+
+<b>Sorting (Code path "src/com/sorting/") :</b><br/>
 Bubble Sort <br/>
 Insertion Sort <br/>
 Selection Sort <br/>
