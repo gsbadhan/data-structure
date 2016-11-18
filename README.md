@@ -1,4 +1,4 @@
 # data-structure examples:<br/>
 
-Stack (FIFO) <br/>
+Stack (LIFO) Last In First out <br/>
 
