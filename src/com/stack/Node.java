@@ -2,7 +2,7 @@ package com.stack;
 
 public class Node<T> {
 	private T data;
-	private Node next;
+	private Node<T> next;
 
 	public Node(T data) {
 		super();
@@ -13,11 +13,11 @@ public class Node<T> {
 		return data;
 	}
 
-	public Node getNext() {
+	public Node<T> getNext() {
 		return next;
 	}
 
-	public void setNext(Node next) {
+	public void setNext(Node<T> next) {
 		this.next = next;
 	}
 

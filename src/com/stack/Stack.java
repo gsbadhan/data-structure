@@ -13,10 +13,10 @@ public class Stack<T> {
 	 */
 	public void push(T data) {
 		if (head == null) {
-			head = new Node(data);
+			head = new Node<T>(data);
 			return;
 		}
-		Node node = new Node(data);
+		Node<T> node = new Node<T>(data);
 		node.setNext(head);
 		head = node;
 	}
@@ -36,7 +36,7 @@ public class Stack<T> {
 			return data;
 		}
 
-		Node next = head.getNext();
+		Node<T> next = head.getNext();
 		data = head.getData();
 		head = null;
 		head = next;
