@@ -2,7 +2,6 @@
 
 <b>Stack</b> (LIFO) Last In First Out. Code path "src/com/stack/" <br/>
 * Infix to Postfix expression evaluation. (code path "src/com/infixToPostfix/")<br/>
-<br/>
 
 <b/>Queue</b> (FIFO) First In First Out. Code path "src/com/queue/" <br/>
 <br/>
