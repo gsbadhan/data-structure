@@ -10,19 +10,21 @@ public class Test {
 		tree.insert(9);
 		tree.insert(50);
 		tree.insert(40);
-		tree.insert(45);
-		tree.insert(35);
-		tree.insert(15);
-		tree.insert(18);
-		tree.insert(19);
-		tree.insert(13);
 		
-		tree.sortedOrder();
+		//In Order
+		tree.inOrderTraversing();
 		
+		//Post Order
+		tree.postOrderTraversing();
+		
+		//Pre Order
+		tree.preOrderTraversing();
+		
+		//Deletion
 		tree.delete(20);
 		
-		tree.sortedOrder();
-		
+		//see after deletion
+		tree.inOrderTraversing();
 		
 	}
 

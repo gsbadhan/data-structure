@@ -13,11 +13,6 @@ public class Tree<D extends Number> {
 		this.data = data;
 	}
 
-	public void sortedOrder() {
-		inOrderTraversing(this);
-		System.out.println();
-	}
-
 	public void insert(D item) {
 		if (this.data == null) {
 			this.data = item;
@@ -75,15 +70,55 @@ public class Tree<D extends Number> {
 	}
 
 	// In Order traversing
-	private void inOrderTraversing(Tree<D> t) {
+	public void inOrderTraversing() {
+		inOrder(this);
+		System.out.println();
+	}
+
+	// Left,Root,Right
+	private void inOrder(Tree<D> t) {
 		if (t.left != null) {
-			inOrderTraversing(t.left);
+			inOrder(t.left);
 		}
 
 		System.out.print(t.data + " ");
 
 		if (t.right != null) {
-			inOrderTraversing(t.right);
+			inOrder(t.right);
+		}
+	}
+
+	// In Order traversing
+	public void postOrderTraversing() {
+		postOrder(this);
+		System.out.println();
+	}
+
+	private void postOrder(Tree<D> t) {
+		if (t.left != null) {
+			postOrder(t.left);
+		}
+		if (t.right != null) {
+			postOrder(t.right);
+		}
+		System.out.print(t.data + " ");
+	}
+
+	// In Order traversing
+	public void preOrderTraversing() {
+		preOrder(this);
+		System.out.println();
+	}
+
+	private void preOrder(Tree<D> t) {
+		if (t != null) {
+			System.out.print(t.data + " ");
+		}
+		if (t.left != null) {
+			preOrder(t.left);
+		}
+		if (t.right != null) {
+			preOrder(t.right);
 		}
 	}
 
