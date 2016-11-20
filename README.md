@@ -1,9 +1,10 @@
 # Data Structure examples<br/>
 
 <b>Stack</b> (LIFO) Last In First Out. Code path "src/com/stack/" <br/>
-*Infix to Postfix expression evaluation<br/>
-<b/>Queue</b> (FIFO) First In First Out. Code path "src/com/queue/" <br/>
+* Infix to Postfix expression evaluation. (code path "src/com/infixToPostfix/")<br/>
+<br/>
 
+<b/>Queue</b> (FIFO) First In First Out. Code path "src/com/queue/" <br/>
 <br/>
 
 <b>Sorting (code path "src/com/sorting/") :</b><br/>
