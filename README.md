@@ -12,5 +12,9 @@ Merge Sort of Array <br/>
 Merge Sort of Linked List <br/>
 Quiksort <br/>
 
+<b>Tree<b><br/>
+Binary Search Tree<br/>
+
+
 
 
