@@ -21,7 +21,7 @@ public class InfixToPostfixExpression {
 
 	
 
-	private static void infixToPostfix(String exp) {
+	private static String infixToPostfix(String exp) {
 		stack.push(OPEN_BRACKET);
 		char tokens[] = exp.toCharArray();
 		for (char c : tokens) {
@@ -46,6 +46,7 @@ public class InfixToPostfixExpression {
 				postFixExp += c;
 			}
 		}
+		return postFixExp;
 	}
 
 	private static void popUptoOpenBracket() {
@@ -79,8 +80,8 @@ public class InfixToPostfixExpression {
 	
 	public static void main(String[] args) {
 		String exp = "A+(B*C-(D/E^F)*G)*H)";
-		infixToPostfix(exp);
-		System.out.println("postexp:" + postFixExp);
+		String postexp=infixToPostfix(exp);
+		System.out.println("postexp:" + postexp);
 	}
 
 }
