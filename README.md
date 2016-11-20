@@ -14,6 +14,9 @@ Quiksort <br/>
 
 <b>Tree</b><br/>
 Binary Search Tree (code path"src/com/BST")<br/>
+* Insertion
+* Deletion
+* Traversing
 
 
 
