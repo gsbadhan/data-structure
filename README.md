@@ -19,7 +19,6 @@ Binary Search Tree (code path"src/com/BST")<br/>
 * Traversing
 
 <br/>
-
 Tree Questions (code path"src/com/BST")<br/>
 * Horizontal traversing
 * Vertically traversing
