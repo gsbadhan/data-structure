@@ -1,7 +1,7 @@
 # Data Structure examples<br/>
 
-Stack (LIFO) Last In First Out. Code path "src/com/stack/" <br/>
-Queue (FIFO) First In First Out. Code path "src/com/queue/" <br/>
+<b>Stack</b> (LIFO) Last In First Out. Code path "src/com/stack/" <br/>
+<b/>Queue</b> (FIFO) First In First Out. Code path "src/com/queue/" <br/>
 <br/>
 
 <b>Sorting (code path "src/com/sorting/") :</b><br/>
