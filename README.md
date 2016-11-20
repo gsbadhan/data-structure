@@ -16,7 +16,7 @@
 Binary Search Tree (code path"src/com/BST")<br/>
 * Insertion
 * Deletion
-* Traversing
+* Traversing (In Order/Pre Order/Post Order )
 
 <br/>
 Tree Questions (code path"src/com/BST/Questions")<br/>
