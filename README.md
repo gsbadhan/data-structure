@@ -17,6 +17,21 @@ Binary Search Tree (code path"src/com/BST")<br/>
 * Insertion
 * Deletion
 * Traversing
+Tree Questions (code path"src/com/BST")<br/>
+* Horizontal traversing
+* Vertically traversing
+* Left side view of Tree
+* Right side view of Tree
+* Top side view of Tree
+* Bottom side view of Tree
+* Maximum diameter/width of Tree
+* Minimum diameter/width of Tree
+* Sum of all data
+* Lowest common Ancestor of Two Node
+* Transform Tree to Linked List
+* Sum of Greater Nodes
+
+
 
 
 
