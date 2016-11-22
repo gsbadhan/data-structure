@@ -42,7 +42,7 @@ Tree Questions (code path"src/com/BST/Questions")<br/>
 
 <br/>
 
-<b> AVL Tree </b><br/>
+<b> AVL Tree (code path "src/com/AVL")</b><br/>
 * Insertion
 * Print 
 
