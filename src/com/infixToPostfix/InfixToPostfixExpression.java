@@ -79,7 +79,7 @@ public class InfixToPostfixExpression {
 	
 	
 	public static void main(String[] args) {
-		String exp = "A+(B*C-(D/E^F)*G)*H)";
+		String exp = "2+(3*4-(5/6^2)*3)*4)";
 		String postexp=infixToPostfix(exp);
 		System.out.println("postexp:" + postexp);
 	}
