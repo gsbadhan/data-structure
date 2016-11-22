@@ -14,6 +14,11 @@
 * Merge Sort of Linked List <br/>
 * Quiksort <br/>
 
+<b>Binary Search (code path "src/com/binarysearch") :</b><br/>
+* Search data in Ascending sorted data
+* Search data in Descending sorted data
+
+
 <b>Tree</b><br/>
 Binary Search Tree (code path"src/com/BST")<br/>
 * Insertion
