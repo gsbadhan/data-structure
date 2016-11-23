@@ -14,7 +14,7 @@
 * remove from first location
 <br/>
 
-<b>Sorting (code path "src/com/sorting/") :</b><br/>
+<b>Sorting:</b> (code path "src/com/sorting/")<br/>
 * Bubble Sort <br/>
 * Insertion Sort <br/>
 * Selection Sort <br/>
@@ -22,7 +22,7 @@
 * Merge Sort of Linked List <br/>
 * Quiksort <br/>
 
-<b>Binary Search (code path "src/com/binarysearch") :</b><br/>
+<b>Binary Search:</b> (code path "src/com/binarysearch")<br/>
 * Search data in Ascending sorted data
 * Search data in Descending sorted data
 
