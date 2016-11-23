@@ -3,7 +3,7 @@ package com.sorting;
 public class MaxHeap {
 
 	public static void main(String[] args) {
-		int inputArr[] = { 2, 7, 5, 1, 24, 3, 78, 90, 34, 65, 89, 24 };
+		int inputArr[] = { 2, 7, 5, 1, 24,100,23,89 };
 		int eArr[] = new int[inputArr.length];
 		show(inputArr);
 
@@ -13,29 +13,28 @@ public class MaxHeap {
 		}
 		show(eArr);
 
-		//delete heap
-		for (int i = 0; i < inputArr.length; i++) {
-			deleteHeap(eArr, eArr[i]);
+		// get largest element from heap
+		for (int i = inputArr.length - 1; i >= 0; i--) {
+			deleteHeap(eArr, i);
 		}
 
 	}
 
-	private static void deleteHeap(int[] eArr, int item) {
-
+	private static void deleteHeap(int[] eArr, int lastUsedIndex) {
+		int max = eArr[0];
+		System.out.println("max:" + max);
+		eArr[0] = eArr[lastUsedIndex];
+		//set -1/lowest number as empty index 
+		eArr[lastUsedIndex] = -1;
+		maxHeapify(eArr, 0);
 	}
 
-	private static void buildHeap(int[] eArr, int index, int item) {
-		// insert item at available location
-		eArr[index] = item;
-		if (index > 0) {
-			maxHeapify(eArr, index);
-		}
+	private static void buildHeap(int[] eArr, int lastIndex, int item) {
+		eArr[lastIndex] = item;
+		maxHeapify(eArr, lastIndex);
 	}
 
 	private static void maxHeapify(int[] eArr, int index) {
-		if (index == 0) {
-			return;
-		}
 		int parentIdx = (index - 1) / 2;
 		int leftChIdx = (2 * parentIdx) + 1;
 		int rightChIdx = (2 * parentIdx) + 2;
