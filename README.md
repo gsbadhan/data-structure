@@ -6,6 +6,14 @@
 <b/>Queue</b> (FIFO) First In First Out. Code path "src/com/queue/" <br/>
 <br/>
 
+<b/>Single Linked List<b/> code path "src/com/linklist/" <br/>
+* simple add
+* add at first location
+* add at last location
+* simple remove
+* remove from first location
+<br/>
+
 <b>Sorting (code path "src/com/sorting/") :</b><br/>
 * Bubble Sort <br/>
 * Insertion Sort <br/>
