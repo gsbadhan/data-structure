@@ -21,6 +21,7 @@
 * Merge Sort of Array <br/>
 * Merge Sort of Linked List <br/>
 * Quiksort <br/>
+* Max-Heap <br/>
 
 <b>Binary Search:</b> (code path "src/com/binarysearch")<br/>
 * Search data in Ascending sorted data
