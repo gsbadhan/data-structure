@@ -6,7 +6,7 @@
 <b/>Queue</b> (FIFO) First In First Out. Code path "src/com/queue/" <br/>
 <br/>
 
-<b/>Single Linked List<b/> code path "src/com/linklist/" <br/>
+<b>Single Linked List</b> code path "src/com/linklist/" <br/>
 * simple add
 * add at first location
 * add at last location
