@@ -12,6 +12,7 @@
 * add at last location
 * remove by element
 * remove from first location
+* search
 <br/>
 
 <b>Double Linked List:</b> code path "src/com/doublelinklist/" <br/>
