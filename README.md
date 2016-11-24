@@ -25,8 +25,8 @@
 <br/>
 
 <b>Sorting:</b> (code path "src/com/sorting/")<br/>
-* Bubble Sort <br/>
-* Insertion Sort <br/>
+* Bubble Sort 
+* Insertion Sort 
 * Selection Sort <br/>
 * Merge Sort of Array <br/>
 * Merge Sort of Linked List <br/>
