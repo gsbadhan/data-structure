@@ -10,8 +10,18 @@
 * simple add
 * add at first location
 * add at last location
-* simple remove
+* remove by element
 * remove from first location
+<br/>
+
+<b>Double Linked List:</b> code path "src/com/doublelinklist/" <br/>
+* simple add
+* add at first location
+* add at last location
+* remove by element
+* remove from last location
+* remove from first location
+* search
 <br/>
 
 <b>Sorting:</b> (code path "src/com/sorting/")<br/>
