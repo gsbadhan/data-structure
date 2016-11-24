@@ -24,28 +24,28 @@
 * search
 <br/>
 
-<b>Sorting:</b> (code path "src/com/sorting/")<br/>
+<b>Sorting:</b> (code path "src/com/sorting/")
 * Bubble Sort 
 * Insertion Sort 
-* Selection Sort <br/>
-* Merge Sort of Array <br/>
-* Merge Sort of Linked List <br/>
-* Quiksort <br/>
-* Max-Heap <br/>
+* Selection Sort 
+* Merge Sort of Array 
+* Merge Sort of Linked List 
+* Quiksort 
+* Max-Heap 
 
-<b>Binary Search:</b> (code path "src/com/binarysearch")<br/>
+<b>Binary Search:</b> (code path "src/com/binarysearch")
 * Search data in Ascending sorted data
 * Search data in Descending sorted data
 <br/>
 
 <b>Tree:</b>
-Binary Search Tree (code path"src/com/BST")<br/>
+Binary Search Tree (code path"src/com/BST")
 * Insertion
 * Deletion
 * Traversing (In Order/Pre Order/Post Order )
 <br/>
 
-Tree Questions (code path"src/com/BST/Questions")<br/>
+Tree Questions (code path"src/com/BST/Questions")
 * Horizontal traversing
 * Vertically traversing
 * Left side view of Tree
@@ -60,7 +60,7 @@ Tree Questions (code path"src/com/BST/Questions")<br/>
 * Sum of Greater Nodes
 <br/>
 
-<b> AVL Tree:</b> (code path "src/com/AVL")<br/>
+<b> AVL Tree:</b> (code path "src/com/AVL")
 * Insertion
 * Print 
 
