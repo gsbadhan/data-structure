@@ -88,7 +88,7 @@ public class Tree<D extends Number> {
 		}
 	}
 
-	// In Order traversing
+	// Post Order traversing
 	public void postOrderTraversing() {
 		postOrder(this);
 		System.out.println();
@@ -104,7 +104,7 @@ public class Tree<D extends Number> {
 		System.out.print(t.data + " ");
 	}
 
-	// In Order traversing
+	// Pre Order traversing
 	public void preOrderTraversing() {
 		preOrder(this);
 		System.out.println();
