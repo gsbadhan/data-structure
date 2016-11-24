@@ -34,8 +34,8 @@
 * Max-Heap 
 
 <b>Binary Search:</b> (code path "src/com/binarysearch")
-* Search data in Ascending sorted data
-* Search data in Descending sorted data
+* Search element in Ascending sorted data
+* Search element in Descending sorted data
 <br/>
 
 <b>Tree:</b>
