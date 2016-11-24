@@ -1,9 +1,9 @@
 # Data Structure examples<br/>
 
-<b>Stack</b> (LIFO) Last In First Out. Code path "src/com/stack/" <br/>
+<b>Stack:</b> (LIFO) Last In First Out. Code path "src/com/stack/" <br/>
 * Infix to Postfix expression evaluation. (code path "src/com/infixToPostfix/")<br/>
 
-<b>Queue</b> (FIFO) First In First Out. Code path "src/com/queue/" <br/>
+<b>Queue:</b> (FIFO) First In First Out. Code path "src/com/queue/" <br/>
 <br/>
 
 <b>Single Linked List:</b> code path "src/com/linklist/" <br/>
@@ -39,7 +39,7 @@
 * Search data in Descending sorted data
 
 
-<b>Tree</b><br/>
+<b>Tree:</b><br/>
 Binary Search Tree (code path"src/com/BST")<br/>
 * Insertion
 * Deletion
@@ -62,7 +62,7 @@ Tree Questions (code path"src/com/BST/Questions")<br/>
 
 <br/>
 
-<b> AVL Tree (code path "src/com/AVL")</b><br/>
+<b> AVL Tree:</b> (code path "src/com/AVL")<br/>
 * Insertion
 * Print 
 
