@@ -45,7 +45,7 @@ Binary Search Tree (code path"src/com/BST")
 * Traversing (In Order/Pre Order/Post Order )
 <br/>
 
-<u>Tree Questions (code path"src/com/BST/Questions")</u>
+<i>Tree Questions (code path"src/com/BST/Questions")</i>
 * Horizontal traversing
 * Vertically traversing
 * Left side view of Tree
