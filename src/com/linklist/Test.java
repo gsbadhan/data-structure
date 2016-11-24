@@ -23,6 +23,8 @@ public class Test {
 		list.removeFirst();
 		list.print();
 		
+		System.out.println("data exist ?:"+list.search(100));
+		
 	}
 
 }

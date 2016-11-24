@@ -75,6 +75,20 @@ public class LinkedList<T> {
 		isEndOfList(head);
 		return true;
 	}
+	
+	public boolean search(T data){
+		Node<T> n=head;
+		if(n==null){
+			return false;
+		}
+		while(n!=null){
+			if(n.getData()==data){
+				return true;
+			}
+			n=n.getNext();
+		}
+		return false;
+	}
 
 	public void print() {
 		if (head == null) {
