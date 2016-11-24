@@ -4,7 +4,6 @@
 * Infix to Postfix expression evaluation. (code path "src/com/infixToPostfix/")<br/>
 
 <b>Queue:</b> (FIFO) First In First Out. Code path "src/com/queue/" <br/>
-<br/>
 
 <b>Single Linked List:</b> code path "src/com/linklist/" <br/>
 * simple add
@@ -37,15 +36,15 @@
 <b>Binary Search:</b> (code path "src/com/binarysearch")<br/>
 * Search data in Ascending sorted data
 * Search data in Descending sorted data
+<br/>
 
-
-<b>Tree:</b><br/>
+<b>Tree:</b>
 Binary Search Tree (code path"src/com/BST")<br/>
 * Insertion
 * Deletion
 * Traversing (In Order/Pre Order/Post Order )
-
 <br/>
+
 Tree Questions (code path"src/com/BST/Questions")<br/>
 * Horizontal traversing
 * Vertically traversing
@@ -59,7 +58,6 @@ Tree Questions (code path"src/com/BST/Questions")<br/>
 * Lowest common Ancestor of Two Node
 * Transform Tree to Linked List
 * Sum of Greater Nodes
-
 <br/>
 
 <b> AVL Tree:</b> (code path "src/com/AVL")<br/>
