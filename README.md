@@ -12,6 +12,7 @@
 * remove by element
 * remove from first location
 * search
+* print all elements
 <br/>
 
 <b>Double Linked List:</b> code path "src/com/doublelinklist/" <br/>
@@ -22,6 +23,14 @@
 * remove from last location
 * remove from first location
 * search
+* print all elements
+<br/>
+
+<b>Circular Linked List:</b> code path "/src/com/circularLinklist" <br/>
+* add
+* remove by element
+* search
+* print all elements
 <br/>
 
 <b>Sorting:</b> (code path "src/com/sorting/")
