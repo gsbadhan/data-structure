@@ -73,6 +73,12 @@ Binary Search Tree (code path"src/com/BST")
 <b> AVL Tree:</b> (code path "src/com/AVL")
 * Insertion
 * Print 
+<br/>
+
+<b> Trie :</b> (code path "src/com/trie")
+* Insertion
+* Search
+<br/>
 
 
 
