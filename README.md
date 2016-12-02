@@ -67,6 +67,7 @@ Binary Search Tree (code path"src/com/BST")
 * Lowest common Ancestor of Two Node
 * Transform Tree to Linked List
 * Sum of Greater Nodes
+* Mirror of Tree
 <br/>
 
 <b> AVL Tree:</b> (code path "src/com/AVL")
