@@ -52,6 +52,9 @@ public class Test {
 		// Sum of Greater Nodes
 		tree.sumOfAllGreaterNodes();
 		
+		//Mirror of tree
+		tree.mirrorOfTree();
+		
 	}
 
 }

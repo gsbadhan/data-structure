@@ -415,4 +415,26 @@ public class Tree<D extends Number> {
 		return sum;
 	}
 
+	public void mirrorOfTree() {
+		Queue<Tree<D>> queue = new LinkedList<>();
+		Tree<D> t = this;
+		queue.add(t);
+		while (!queue.isEmpty()) {
+			Tree<D> p = queue.poll();
+			Tree<D> temp=p.left;
+			p.left=p.right;
+			p.right=temp;
+			
+			if (p.left != null) {
+				queue.add(p.left);
+			}
+			if (p.right != null) {
+				queue.add(p.right);
+			}
+		}
+		//print 
+		inOrderTraversing(t);
+	}
+	
+
 }
