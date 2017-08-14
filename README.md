@@ -54,13 +54,13 @@ Binary Search Tree (code path"src/com/BST")
 * Traversing (In Order/Pre Order/Post Order )
 <br/>
 
-<h4>Tree Questions (code path"src/com/BST/Questions")</h4>
+<b>Tree Questions:</b> (code path"src/com/BST/Questions")
 * Horizontal traversing
 * Vertically traversing
-* Left side view of Tree
-* Right side view of Tree
-* Top side view of Tree
-* Bottom side view of Tree
+* Left view of Tree
+* Right view of Tree
+* Top view of Tree
+* Bottom view of Tree
 * Maximum diameter/width of Tree
 * Minimum diameter/width of Tree
 * Sum of all data
