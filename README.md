@@ -75,6 +75,11 @@ Binary Search Tree (code path"src/com/BST")
 * Print 
 <br/>
 
+<b> Interval Tree:</b> (code path "src/com/intervaltree")
+* Insertion
+* Search 
+<br/>
+
 <b> Trie :</b> (code path "src/com/trie")
 * Insertion
 * Search
