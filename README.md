@@ -80,6 +80,12 @@ Binary Search Tree (code path"src/com/BST")
 * Search 
 <br/>
 
+<b> Fenwick Tree:</b> (code path "src/com/fenwicktree")
+* Insertion
+* Update
+* Prefix Sum
+<br/>
+
 <b> Trie :</b> (code path "src/com/trie")
 * Insertion
 * Search
