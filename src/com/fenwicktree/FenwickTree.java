@@ -55,17 +55,37 @@ public class FenwickTree {
 
 	public void updateIndexTree(int index, int newValue) {
 		if (index < 0 || index >= (indexArr.length)) {
-			return;
+			throw new IllegalArgumentException("invalid index " + index);
 		}
 		int oldValue = orginalArr[index];
 		orginalArr[index] = newValue;
-		int diffValue = oldValue - newValue;
+		int diffValue = findDiff(oldValue, newValue);
 		index = index + 1;
 		while (index < indexArr.length) {
 			indexArr[index] = indexArr[index] + diffValue;
 			index = getNext(index);
 		}
 
+	}
+
+	/**
+	 * get sum between range
+	 * 
+	 * @param fromIndex
+	 * @param toIndex
+	 * @return
+	 */
+	public int rangeSum(int fromIndex, int toIndex) {
+		if (fromIndex > toIndex || fromIndex < 0 || toIndex < 0)
+			throw new IllegalArgumentException("from must be greater than " + fromIndex + " toIndex " + toIndex);
+		if (fromIndex == 0)
+			return getSumUpto(toIndex);
+
+		return getSumUpto(toIndex) - getSumUpto(fromIndex - 1);
+	}
+
+	private int findDiff(int oldVal, int newVal) {
+		return newVal > oldVal ? (newVal - oldVal) : -(oldVal - newVal);
 	}
 
 	private int getParent(int index) {
