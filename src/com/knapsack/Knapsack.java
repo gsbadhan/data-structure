@@ -1,6 +1,7 @@
 package com.knapsack;
 
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Knapsack {
@@ -23,13 +24,14 @@ public class Knapsack {
 	 ******************************/
 	public static void main(String[] args) {
 		Map<Integer, Item> itemAndValue = new LinkedHashMap<>();
-		// given N items with weight and value
+		// given N items with weight and value. weight and value must be sorted
 		itemAndValue.put(1, new Item(3, 4));
-		itemAndValue.put(2, new Item(4, 20));
-		itemAndValue.put(3, new Item(5, 2));
-		itemAndValue.put(4, new Item(6, 7));
-		itemAndValue.put(5, new Item(7, 3));
-		// theif's bag with max fill up capacity
+		itemAndValue.put(2, new Item(4, 10));
+		itemAndValue.put(3, new Item(5, 15));
+		itemAndValue.put(4, new Item(6, 20));
+		itemAndValue.put(5, new Item(7, 21));
+		
+		// knapsack with maximum fill up capacity
 		int bagCapacity = 10;
 
 		findOutMaxValueEarned(itemAndValue, bagCapacity);
@@ -56,7 +58,18 @@ public class Knapsack {
 				}
 			}
 		}
-		System.out.println("maximum value earned for bag:" + knapsack[maxItems - 1][maxBagCapacity - 1]);
+		System.out.println("maximum kanpsack value:" + knapsack[maxItems - 1][maxBagCapacity - 1]);
+
+		// find out weight subset
+		int j = maxBagCapacity;
+		for (int i = maxItems - 2; i >= 1; i--) {
+			int weight = itemAndValue.get(i).getWeight();
+			if (j - weight <= 0) {
+				continue;
+			}
+			System.out.println("weight:" + weight);
+			j = j - weight;
+		}
 
 	}
 

@@ -91,7 +91,7 @@ Binary Search Tree (code path"src/com/BST")
 * Search
 <br/>
 
-<b> Knapsack :</b> (code path "src/com/kanpsack")<br/>
+<b> Knapsack(0/1) Problem :</b> (code path "src/com/knapsack")<br/>
 
 
 
