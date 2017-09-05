@@ -8,10 +8,10 @@ package ranking;
 public class QuickSelect {
 
 	public static void main(String args[]) {
-		int[] arr = { 2, 45, 89, 5, 8, 100, 45 };
+		int[] arr = { 2, 50, 89, 5, 8, 100, 45 };
 
 		// Kth smallest
-		int kthSmallestIndex = 3;
+		int kthSmallestIndex = 4;
 
 		int kthSmallestElement = quickSelect(kthSmallestIndex, arr, 0, arr.length - 1);
 
@@ -23,13 +23,11 @@ public class QuickSelect {
 
 		if (pIndex == kthSmallestIndex) {
 			return arr[pIndex];
-		}
-		if (kthSmallestIndex > pIndex) {
-			quickSelect(kthSmallestIndex, arr, start, pIndex - 1);
+		} else if (kthSmallestIndex < pIndex) {
+			return quickSelect(kthSmallestIndex, arr, start, pIndex - 1);
 		} else {
-			quickSelect(kthSmallestIndex, arr, pIndex + 1, end);
+			return quickSelect(kthSmallestIndex, arr, pIndex + 1, end);
 		}
-		return -1;
 	}
 
 	private static int partition(int[] arr, int start, int end) {
