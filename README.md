@@ -27,10 +27,7 @@
 <br/>
 
 <b>Circular Linked List:</b> code path "/src/com/circularLinklist" <br/>
-* add
-* remove by element
-* search
-* print all elements
+* add,remove,search,print all
 <br/>
 
 <b>Sorting:</b> (code path "src/com/sorting/")
@@ -39,20 +36,25 @@
 * Selection Sort 
 * Merge Sort of Array 
 * Merge Sort of Linked List 
-* Quiksort 
-* Max-Heap 
+* Quick Sort 
+* Max-Heap
+<br/>
+
+<b>Ranking:</b> (code path "src/com/ranking/")
+* Quick Select (Kth smallest/largest element)
+<br/> 
+
 
 <b>Binary Search:</b> (code path "src/com/binarysearch")
-* Search element in Ascending sorted data
-* Search element in Descending sorted data
+* Search element in Ascending and Descending sorted data
 <br/>
+
 
 <b>Tree:</b>
 Binary Search Tree (code path"src/com/BST")
-* Insertion
-* Deletion
-* Traversing (In Order/Pre Order/Post Order )
+* Insertion,Deletion,Traversing (In Order/Pre Order/Post Order )
 <br/>
+
 
 <b>Tree Questions:</b> (code path"src/com/BST/Questions")
 * Horizontal traversing
