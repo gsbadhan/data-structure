@@ -15,24 +15,25 @@ public class Tree {
 		System.out.println("postfix Exp:" + postfixExp);
 
 		Stack<Node> treeStack = new Stack<>();
-		Node newNode;
 		int symbolCounter = 0;
 		while (symbolCounter < postfixExp.length()) {
 			char symbol = postfixExp.charAt(symbolCounter++);
 
 			if (InfixPostfixConvertor.isOperand(symbol)) {
-				newNode = new Node(symbol);
+				Node newNode = new Node(symbol);
 				treeStack.push(newNode);
 			} else if (InfixPostfixConvertor.isOperator(symbol)) {
 				Node right = treeStack.pop();
 				Node left = treeStack.pop();
 
-				newNode = new Node(symbol);
+				Node newNode = new Node(symbol);
 				newNode.leftChild = left;
 				newNode.rightChild = right;
 				treeStack.push(newNode);
 			}
 		}
+		
+		//at  last pop up root
 		root = treeStack.pop();
 	}
 
