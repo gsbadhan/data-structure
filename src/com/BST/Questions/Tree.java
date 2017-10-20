@@ -421,10 +421,10 @@ public class Tree<D extends Number> {
 		queue.add(t);
 		while (!queue.isEmpty()) {
 			Tree<D> p = queue.poll();
-			Tree<D> temp=p.left;
-			p.left=p.right;
-			p.right=temp;
-			
+			Tree<D> temp = p.left;
+			p.left = p.right;
+			p.right = temp;
+
 			if (p.left != null) {
 				queue.add(p.left);
 			}
@@ -432,9 +432,79 @@ public class Tree<D extends Number> {
 				queue.add(p.right);
 			}
 		}
-		//print 
+		// print
 		inOrderTraversing(t);
 	}
-	
+
+	public void maxDiameterOfTree() {
+		// assuming root node at 1 index
+		int globalMaxCount = 1;
+
+		// traverse left sub tree
+		int leftSideMaxDiameter = maxDiameter(this.left, this.left == null ? globalMaxCount : globalMaxCount + 1);
+		System.out.println("max diameter of left side:" + leftSideMaxDiameter);
+
+		// traverse right sub tree
+		int rightSideMaxDiameter = maxDiameter(this.right, this.right == null ? globalMaxCount : globalMaxCount + 1);
+		System.out.println("max diameter of right side:" + rightSideMaxDiameter);
+
+		int maxOfBoth = leftSideMaxDiameter > rightSideMaxDiameter ? leftSideMaxDiameter : rightSideMaxDiameter;
+		System.out.println("max diameter of tree:" + maxOfBoth);
+
+	}
+
+	private int maxDiameter(Tree<D> tree, int globalMaxCount) {
+		if (tree == null)
+			return globalMaxCount;
+
+		if (tree.left != null)
+			globalMaxCount = maxDiameter(tree.left, globalMaxCount + 1);
+		if (tree.right != null)
+			globalMaxCount = maxDiameter(tree.right, globalMaxCount + 1);
+
+		return globalMaxCount;
+	}
+
+	public void isoMorphicTree(Tree<D> treeA, Tree<D> treeB) {
+		boolean isIsomorphic = isIsomorphic(treeA, treeB);
+		System.out.println("isIsomorphic:" + isIsomorphic);
+	}
+
+	private boolean isIsomorphic(Tree<D> treeA, Tree<D> treeB) {
+		if (treeA == null && treeB == null) {
+			return true;
+		}
+		if (treeA == null || treeB == null) {
+			return false;
+		}
+		if (treeA.data != treeB.data) {
+			return false;
+		}
+
+		// check same side of tree
+		boolean isLeftAEqualsLeftB = isIsomorphic(treeA.left, treeB.left);
+		boolean isRightAEqualsRightB = isIsomorphic(treeA.right, treeB.right);
+		// check different side of tree
+		boolean isLeftAEqualsRightB = isIsomorphic(treeA.left, treeB.right);
+		boolean isRightAEqualsLeftB = isIsomorphic(treeA.right, treeB.left);
+
+		return (isLeftAEqualsLeftB && isRightAEqualsRightB) || (isLeftAEqualsRightB && isRightAEqualsLeftB);
+	}
+
+	public Tree<D> copyTree(Tree<D> tree) {
+		Queue<Tree<D>> queue = new LinkedList<>();
+		queue.add(tree);
+		Tree<D> newTree = new Tree<>();
+		while (!queue.isEmpty()) {
+			Tree<D> node = queue.poll();
+			newTree.insert(node.data);
+
+			if (node.left != null)
+				queue.add(node.left);
+			if (node.right != null)
+				queue.add(node.right);
+		}
+		return newTree;
+	}
 
 }

@@ -1,60 +1,68 @@
 package com.BST.Questions;
 
-
 public class Test {
 
 	public static void main(String[] args) {
 		Tree<Number> tree = new Tree<Number>();
-		//insert data
+		// insert data
 		tree.insert(6);
 		tree.insert(20);
 		tree.insert(18);
 		tree.insert(21);
+		tree.insert(4);
 		tree.insert(5);
-		tree.insert(7);
 		
-		//in-order sorting
+		// in-order sorting
 		tree.sortedOrder();
-		
-		//Horizontal traversing
+
+		// Horizontal traversing
 		tree.horizontalTraversing();
 
-		//Vertically traversing
+		// Vertically traversing
 		tree.verticalTraversing();
-		
-		//Left side view of Tree
+
+		// Left side view of Tree
 		tree.showLeftView();
-		
-		//Right side view of Tree
+
+		// Right side view of Tree
 		tree.showRightView();
-		
-		//Top side view of Tree
+
+		// Top side view of Tree
 		tree.showTopView();
-		
-		//Bottom side view of Tree
+
+		// Bottom side view of Tree
 		tree.showBottomView();
-		
-		//Maximum diameter/width of Tree 
+
+		// Maximum width of Tree
 		tree.maxWidthDepthWise();
-		
-		//Minimum diameter/width of Tree
+
+		// Minimum width of Tree
 		tree.minWidthDepthWise();
+
+		// maximum diameter of tree
+		tree.maxDiameterOfTree();
+
+		// copy tree
+		Tree<Number> copyOfTree=tree.copyTree(tree);
 		
-		//Sum of all data
+		// check tree is isomorphic of or not
+		tree.isoMorphicTree(tree, copyOfTree);
+
+		// Sum of all data
 		tree.sumOfNodesLevelWise();
-		
+
 		// Lowest common Ancestor of Two Node
-		tree.lowestCommonAncestor(5,14);
-		
+		tree.lowestCommonAncestor(5, 14);
+
 		// Transform Tree to Linked List
 		tree.converTreeToLinkedList();
-		
+
 		// Sum of Greater Nodes
 		tree.sumOfAllGreaterNodes();
-		
-		//Mirror of tree
+
+		// Mirror of tree
 		tree.mirrorOfTree();
-		
+
 	}
 
 }

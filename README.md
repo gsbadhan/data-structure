@@ -59,12 +59,15 @@ Binary Search Tree (code path"src/com/BST")
 <b>Tree Questions:</b> (code path"src/com/BST/Questions")
 * Horizontal traversing
 * Vertically traversing
-* Left view of Tree
-* Right view of Tree
-* Top view of Tree
-* Bottom view of Tree
-* Maximum diameter/width of Tree
-* Minimum diameter/width of Tree
+* Left view of tree
+* Right view of tree
+* Top view of tree
+* Bottom view of tree
+* Maximum width of tree
+* Minimum width of tree
+* Maximum diameter of tree
+* create copy of existing tree
+* Isomorphic tree
 * Sum of all data
 * Lowest common Ancestor of Two Node
 * Transform Tree to Linked List
