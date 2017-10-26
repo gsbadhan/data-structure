@@ -6,29 +6,10 @@
 <b>Queue:</b> (FIFO) First In First Out. Code path "src/com/queue/" <br/>
 
 <b>Single Linked List:</b> code path "src/com/linklist/" <br/>
-* simple add
-* add at first location
-* add at last location
-* remove by element
-* remove from first location
-* search
-* print all elements
-<br/>
 
 <b>Double Linked List:</b> code path "src/com/doublelinklist/" <br/>
-* simple add
-* add at first location
-* add at last location
-* remove by element
-* remove from last location
-* remove from first location
-* search
-* print all elements
-<br/>
 
 <b>Circular Linked List:</b> code path "/src/com/circularLinklist" <br/>
-* add,remove,search,print all
-<br/>
 
 <b>Sorting:</b> (code path "src/com/sorting/")
 * Bubble Sort 
@@ -96,8 +77,9 @@ Binary Search Tree (code path"src/com/BST")
 * Search
 <br/>
 
-<b> Knapsack(0/1) Problem :</b> (code path "src/com/knapsack")<br/>
+<b> String Matching Algos:</b> (code path "src/com/patternmatch")<br/>
 
+<b> Knapsack(0/1) Problem :</b> (code path "src/com/knapsack")<br/>
 
 
 
