@@ -2,6 +2,7 @@ package com.BST.Questions;
 
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -52,50 +53,50 @@ public class Tree<D extends Number> {
 
 	public void showLeftView() {
 		System.out.print("left view:");
-		int depth = 0;
-		TreeMap<Integer, Number> map = new TreeMap<>();
-		leftSide(this, depth, map);
-
-		System.out.println(map);
+		// to avoid taking global variables, i have taken Queue to main maximum depth
+		Queue<Integer> maxDepth = new LinkedList<>();
+		maxDepth.add(0);
+		int currentDepth = 1;
+		leftSide(this, maxDepth, currentDepth);
+		System.out.println();
 	}
 
-	private void leftSide(Tree<D> tree, int depth, TreeMap<Integer, Number> map) {
-		if (tree.left != null) {
-			leftSide(tree.left, depth + 1, map);
-		}
+	private void leftSide(Tree<D> tree, Queue<Integer> maxDepth, int currentDepth) {
+		if (tree == null)
+			return;
 
-		if (!map.containsKey(depth)) {
-			map.put(depth, tree.data);
+		if (currentDepth > maxDepth.element()) {
+			System.out.print(tree.data + " ");
+			// remove old depth, set new max depth
+			maxDepth.remove();
+			maxDepth.add(currentDepth);
 		}
-
-		if (tree.right != null) {
-			leftSide(tree.right, depth + 1, map);
-		}
-
+		leftSide(tree.left, maxDepth, currentDepth + 1);
+		leftSide(tree.right, maxDepth, currentDepth + 1);
 	}
 
 	public void showRightView() {
 		System.out.print("right view:");
-		int depth = 0;
-		TreeMap<Integer, Number> map = new TreeMap<>();
-		rightSide(this, depth, map);
-
-		System.out.println(map);
+		Queue<Integer> maxDepth = new LinkedList<>();
+		maxDepth.add(0);
+		int currentDepth = 1;
+		rightSide(this, maxDepth, currentDepth);
+		System.out.println();
 	}
 
-	private void rightSide(Tree<D> tree, int depth, TreeMap<Integer, Number> map) {
-		if (tree.right != null) {
-			rightSide(tree.right, depth + 1, map);
-		}
+	private void rightSide(Tree<D> tree, Queue<Integer> maxDepth, int currentDepth) {
+		if (tree == null) 
+			return;
 
-		if (!map.containsKey(depth)) {
-			map.put(depth, tree.data);
+		if (currentDepth > maxDepth.element()) {
+			System.out.print(tree.data + " ");
+			// remove old depth, set new max depth
+			maxDepth.remove();
+			maxDepth.add(currentDepth);
 		}
-
-		if (tree.left != null) {
-			rightSide(tree.left, depth + 1, map);
-		}
-
+		
+		rightSide(tree.right, maxDepth, currentDepth + 1);
+		rightSide(tree.left, maxDepth, currentDepth + 1);
 	}
 
 	// In-Order traversing
