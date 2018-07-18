@@ -25,6 +25,13 @@ public class Test {
 		
 		System.out.println("data exist ?:"+list.search(100));
 		
+		//just print in reverse order
+		list.reversePrint();
+		
+		//reverse list
+		list.reverseList();
+		list.print();
+		
 	}
 
 }

@@ -75,17 +75,17 @@ public class LinkedList<T> {
 		isEndOfList(head);
 		return true;
 	}
-	
-	public boolean search(T data){
-		Node<T> n=head;
-		if(n==null){
+
+	public boolean search(T data) {
+		Node<T> n = head;
+		if (n == null) {
 			return false;
 		}
-		while(n!=null){
-			if(n.getData()==data){
+		while (n != null) {
+			if (n.getData() == data) {
 				return true;
 			}
-			n=n.getNext();
+			n = n.getNext();
 		}
 		return false;
 	}
@@ -100,5 +100,36 @@ public class LinkedList<T> {
 			t = t.getNext();
 		}
 		System.out.println();
+	}
+
+	public void reversePrint() {
+		reversePrint(head);
+		System.out.println();
+	}
+
+	private void reversePrint(Node<T> curr) {
+		if (curr.getNext() != null)
+			reversePrint(curr.getNext());
+		System.out.print(curr.getData() + " ");
+	}
+
+	public void reverseList() {
+		reverseList(head);
+	}
+
+	private Node<T> reverseList(Node<T> curr) {
+		Node<T> hd = null;
+		if (curr.getNext() != null)
+			hd = reverseList(curr.getNext());
+		if (curr.getNext() == null) {
+			head = curr;
+			return curr;
+		} else {
+			hd.setNext(curr);
+			curr.setNext(null);
+			// just to maintain end pointer to main whole list consistent
+			end = hd.getNext();
+			return hd.getNext();
+		}
 	}
 }
