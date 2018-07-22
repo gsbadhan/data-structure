@@ -8,16 +8,18 @@ public class LCA {
 
 	public static void main(String args[]) {
 		BinaryTree binaryTree = new BinaryTree();
-		
-		//number must be unique
+
+		// number must be unique
 		Number[] data = { 67, 45, 89, 100, 56, 60, 20, 70, 90 };
-		//build binary tree
+		// build binary tree
 		binaryTree.buildTree(data);
-		
+
 		// LCA pair input
-		Number a = 45;
-		Number b = 89;
-		Number lca = findLCA(binaryTree.getRootOfTree(), a, b);
+		Number lca = findLCA(binaryTree.getRootOfTree(), 45, 89);
+		System.out.println("LCA :" + lca);
+		lca = findLCA(binaryTree.getRootOfTree(), 70, 90);
+		System.out.println("LCA :" + lca);
+		lca = findLCA(binaryTree.getRootOfTree(), 70, 56);
 		System.out.println("LCA :" + lca);
 	}
 
