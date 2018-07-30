@@ -1,4 +1,4 @@
-package com.questions;
+package com.miscellaneous.questions;
 
 import java.util.Arrays;
 

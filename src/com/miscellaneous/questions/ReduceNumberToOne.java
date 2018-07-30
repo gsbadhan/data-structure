@@ -1,4 +1,4 @@
-package com.questions;
+package com.miscellaneous.questions;
 
 public class ReduceNumberToOne {
 

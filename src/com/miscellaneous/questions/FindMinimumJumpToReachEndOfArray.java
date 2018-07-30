@@ -1,4 +1,4 @@
-package com.questions;
+package com.miscellaneous.questions;
 
 /**
  * find minimum jump to reach end of array
