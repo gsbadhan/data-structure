@@ -13,8 +13,8 @@ public class StringPermutation {
 
 	private static void permutation(String str) {
 		List<String> list = substring(str);
-		System.out.println(list.size());
-		System.out.println(list);
+		System.out.println("total combinations:" + list.size());
+		System.out.println("all combinations:" + list);
 	}
 
 	public static List<String> substring(String input) {
@@ -37,7 +37,7 @@ public class StringPermutation {
 		return lastList;
 	}
 
-	public static List<String> merge(List<String> list, String c) {
+	public static List<String> merge(List<String> list, String ch) {
 		List<String> res = new ArrayList<>();
 		// Loop through all the string in the list
 		for (String s : list) {
@@ -45,7 +45,7 @@ public class StringPermutation {
 			// positions
 			// and add them to the new list
 			for (int i = 0; i <= s.length(); ++i) {
-				String ps = new StringBuffer(s).insert(i, c).toString();
+				String ps = new StringBuffer(s).insert(i, ch).toString();
 				res.add(ps);
 			}
 		}
