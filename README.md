@@ -82,7 +82,7 @@ Binary Search Tree (code path"src/com/BST")
 <b> Knapsack(0/1) Problem :</b> (code path "src/com/knapsack")<br/>
 
 
-
+<b> miscellaneous questions </b> (code path "com/miscellaneous/questions")<br/>
 
 
 
