@@ -21,6 +21,9 @@ public class Test {
 
 		// Vertically traversing
 		tree.verticalTraversing();
+		
+		// Vertically maximum sum		
+		tree.maxVerticalSum();
 
 		// Left side view of Tree
 		tree.showLeftView();

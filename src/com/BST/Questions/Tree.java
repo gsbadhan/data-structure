@@ -3,12 +3,14 @@ package com.BST.Questions;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Queue;
+import java.util.Set;
 import java.util.TreeMap;
 
 public class Tree<D extends Number> {
@@ -85,7 +87,7 @@ public class Tree<D extends Number> {
 	}
 
 	private void rightSide(Tree<D> tree, Queue<Integer> maxDepth, int currentDepth) {
-		if (tree == null) 
+		if (tree == null)
 			return;
 
 		if (currentDepth > maxDepth.element()) {
@@ -94,7 +96,7 @@ public class Tree<D extends Number> {
 			maxDepth.remove();
 			maxDepth.add(currentDepth);
 		}
-		
+
 		rightSide(tree.right, maxDepth, currentDepth + 1);
 		rightSide(tree.left, maxDepth, currentDepth + 1);
 	}
@@ -164,12 +166,12 @@ public class Tree<D extends Number> {
 
 	// Top View traversing
 	public void showTopView() {
-		TreeMap<Integer, D> map = new TreeMap<>();
-		topViewHzTraversing(this, map);
-		System.out.println("top view:" + map);
+		topViewHzTraversing(this);
 	}
 
-	private void topViewHzTraversing(Tree<D> tree, TreeMap<Integer, D> map) {
+	private void topViewHzTraversing(Tree<D> tree) {
+		Set<Integer> depthTracker = new HashSet<>();
+		String topView = "";
 		Queue<MetaTree> que = new LinkedList<>();
 		int depth = 0;
 		que.add(new MetaTree(tree, depth));
@@ -178,8 +180,9 @@ public class Tree<D extends Number> {
 			Tree<D> t = mt.getTree();
 			depth = mt.getLevel();
 
-			if (!map.containsKey(depth)) {
-				map.put(depth, t.data);
+			if (!depthTracker.contains(depth)) {
+				depthTracker.add(depth);
+				topView = topView + t.data + " ";
 			}
 
 			if (t.left != null) {
@@ -189,6 +192,7 @@ public class Tree<D extends Number> {
 				que.add(new MetaTree(t.right, depth + 1));
 			}
 		}
+		System.out.println("top view:" + topView);
 	}
 
 	// Bottom view traversing
@@ -506,6 +510,38 @@ public class Tree<D extends Number> {
 				queue.add(node.right);
 		}
 		return newTree;
+	}
+
+	public void maxVerticalSum() {
+		findMaxSumVertically(this);
+	}
+
+	private void findMaxSumVertically(Tree<D> tree) {
+		Map<Integer, Integer> depthWiseSum = new HashMap<>();
+		Queue<MetaTree> que = new LinkedList<>();
+		que.add(new MetaTree(this, 0));
+		while (!que.isEmpty()) {
+			MetaTree mt = que.remove();
+			Tree<D> tr = mt.getTree();
+			int depth = mt.level;
+			if (depthWiseSum.containsKey(depth)) {
+				depthWiseSum.put(depth, depthWiseSum.get(depth) + tr.data.intValue());
+			} else {
+				depthWiseSum.put(depth, tr.data.intValue());
+			}
+
+			if (tr.left != null)
+				que.add(new MetaTree(tr.left, depth + 1));
+			if (tr.right != null)
+				que.add(new MetaTree(tr.right, depth - 1));
+		}
+
+		//
+		int maxSum = 0;
+		for (int sum : depthWiseSum.values()) {
+			maxSum = Math.max(maxSum, sum);
+		}
+		System.out.println("maximum vertical sum:" + maxSum);
 	}
 
 }
