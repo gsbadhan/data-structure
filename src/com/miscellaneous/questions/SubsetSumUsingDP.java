@@ -2,7 +2,7 @@ package com.miscellaneous.questions;
 
 import java.util.Arrays;
 
-public class SubsetSum {
+public class SubsetSumUsingDP {
 	
 	public static void main(String args[]) {
 		// must be distinct set of positive elements
