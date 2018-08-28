@@ -223,8 +223,7 @@ public class Tree<D extends Number> {
 	}
 
 	public void maxWidthDepthWise() {
-		String output = maxWidth(this);
-		System.out.println("max width:" + output);
+		maxWidth(this);
 	}
 
 	private String maxWidth(Tree<D> tree) {
@@ -256,6 +255,9 @@ public class Tree<D extends Number> {
 				width = width - 1;
 			}
 		}
+
+		System.out.println("max width:" + maxWidth + " and max depth:" + maxWidthDepth);
+
 		return maxWidthDepth + ":" + maxWidth;
 	}
 
@@ -403,7 +405,7 @@ public class Tree<D extends Number> {
 
 	public void sumOfAllGreaterNodes() {
 		int sum = sumofTree(this, 0);
-		System.out.println("sum[" + sum + "]");
+		System.out.println("sum of maximum nodes: " + sum);
 
 	}
 
@@ -439,6 +441,7 @@ public class Tree<D extends Number> {
 		}
 		// print
 		inOrderTraversing(t);
+		System.out.println();
 	}
 
 	public void maxDiameterOfTree() {
@@ -542,6 +545,21 @@ public class Tree<D extends Number> {
 			maxSum = Math.max(maxSum, sum);
 		}
 		System.out.println("maximum vertical sum:" + maxSum);
+	}
+
+	// maximum sum of sub-tree from tree
+	public void maximumSumOfSubTree() {
+		int maxSum = maximumSumOfSubTree(this, 0);
+		System.out.println("maximum sum of sub-tree:" + maxSum);
+	}
+
+	private int maximumSumOfSubTree(Tree<D> tree, int sum) {
+		if (tree == null)
+			return 0;
+		int leftSubTreeSum = maximumSumOfSubTree(tree.left, sum);
+		int rightSubTreeSum = maximumSumOfSubTree(tree.right, sum);
+		sum = tree.data.intValue() + Math.max(leftSubTreeSum, rightSubTreeSum);
+		return sum;
 	}
 
 }

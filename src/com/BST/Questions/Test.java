@@ -9,8 +9,8 @@ public class Test {
 		tree.insert(20);
 		tree.insert(18);
 		tree.insert(21);
-		tree.insert(4);
-		tree.insert(5);
+		tree.insert(-4);
+		tree.insert(-5);
 		tree.insert(23);
 		
 		// in-order sorting
@@ -66,6 +66,9 @@ public class Test {
 
 		// Mirror of tree
 		tree.mirrorOfTree();
+		
+		// maximum sum of sub-tree from tree
+		tree.maximumSumOfSubTree();
 
 	}
 
