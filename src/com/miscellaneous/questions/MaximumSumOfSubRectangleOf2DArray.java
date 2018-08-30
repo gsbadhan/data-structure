@@ -18,9 +18,10 @@ public class MaximumSumOfSubRectangleOf2DArray {
 		int rowLen = arr.length;
 
 		for (int col = 0; col < colLen; col++) {
+			//initialize on every iteration
 			int[] slice = new int[rowLen];
 			for (int row = col; row < rowLen; row++) {
-				slice = getSliceOfArray(slice, arr, row, rowLen);
+				slice = getVerticalSliceOfColumns(slice, arr, row, rowLen);
 				// kadane's algo to find max sum from slice of row
 				int[] sumAndStartAndEnd = KadaneAlgoMaximumSumOfSubArray.findMaximumSumOfSubArrayWithStartAndEnd(slice);
 				currentSum = sumAndStartAndEnd[0];
@@ -40,7 +41,7 @@ public class MaximumSumOfSubRectangleOf2DArray {
 
 	}
 
-	private static int[] getSliceOfArray(int[] slice, int[][] arr, int col, int rowLen) {
+	private static int[] getVerticalSliceOfColumns(int[] slice, int[][] arr, int col, int rowLen) {
 		for (int row = 0; row < rowLen; row++) {
 			slice[row] = slice[row] + arr[row][col];
 		}
