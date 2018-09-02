@@ -12,7 +12,7 @@ public class Test {
 		tree.insert(-4);
 		tree.insert(-5);
 		tree.insert(23);
-		
+
 		// in-order sorting
 		tree.sortedOrder();
 
@@ -21,8 +21,8 @@ public class Test {
 
 		// Vertically traversing
 		tree.verticalTraversing();
-		
-		// Vertically maximum sum		
+
+		// Vertically maximum sum
 		tree.maxVerticalSum();
 
 		// Left side view of Tree
@@ -47,8 +47,8 @@ public class Test {
 		tree.maxDiameterOfTree();
 
 		// copy tree
-		Tree<Number> copyOfTree=tree.copyTree(tree);
-		
+		Tree<Number> copyOfTree = tree.copyTree(tree);
+
 		// check tree is isomorphic of or not
 		tree.isoMorphicTree(tree, copyOfTree);
 
@@ -64,9 +64,12 @@ public class Test {
 		// Sum of Greater Nodes
 		tree.sumOfAllGreaterNodes();
 
+		// Sum of Greater Nodes and show conversion in new tree
+		tree.sumOfAllGreaterNodesAndBuildNewTree();
+
 		// Mirror of tree
 		tree.mirrorOfTree();
-		
+
 		// maximum sum of sub-tree from tree
 		tree.maximumSumOfSubTree();
 

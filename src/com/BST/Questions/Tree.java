@@ -26,6 +26,10 @@ public class Tree<D extends Number> {
 		this.data = data;
 	}
 
+	public void setData(D data) {
+		this.data = data;
+	}
+
 	public void sortedOrder() {
 		inOrderTraversing(this);
 		System.out.println();
@@ -410,15 +414,29 @@ public class Tree<D extends Number> {
 	}
 
 	private int sumofTree(Tree<D> tree, int sum) {
-
-		if (tree.right != null) {
-			sum = sumofTree(tree.right, sum);
-		}
+		if (tree == null)
+			return sum;
+		sum = sumofTree(tree.right, sum);
 		sum = sum + tree.data.intValue();
+		sum = sumofTree(tree.left, sum);
+		return sum;
+	}
 
-		if (tree.left != null) {
-			sum = sumofTree(tree.left, sum);
-		}
+	public void sumOfAllGreaterNodesAndBuildNewTree() {
+		Tree<D> duplicateTree = copyTree(this);
+		int sum = sumofTreex(duplicateTree, 0);
+		System.out.print("sum of maximum nodes: " + sum + " and new tree will be:");
+		inOrderTraversing(duplicateTree);
+		System.out.println();
+	}
+
+	private int sumofTreex(Tree<D> tree, int sum) {
+		if (tree == null)
+			return sum;
+		sum = sumofTreex(tree.right, sum);
+		sum = sum + tree.data.intValue();
+		tree.setData((D) new Integer(sum));
+		sum = sumofTreex(tree.left, sum);
 		return sum;
 	}
 
