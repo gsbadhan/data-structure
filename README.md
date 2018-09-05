@@ -26,8 +26,9 @@
 <br/> 
 
 
-<b>Binary Search:</b> (code path "src/com/binarysearch")
-* Search element in Ascending and Descending sorted data
+<b>Search:</b> (code path "src/com/search/")
+* Binary search: Search element in Ascending/Descending order 1D sorted data
+* Stair search: Search element in Ascending order 2D sorted data
 <br/>
 
 
