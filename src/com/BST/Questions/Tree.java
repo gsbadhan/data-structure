@@ -351,9 +351,9 @@ public class Tree<D extends Number> {
 	}
 
 	private void lowestAncestor(Tree<D> tree, int a, int b) {
-		if (tree.data.intValue() > Math.max(a, b)) {
+		if (tree.data.intValue() > a && tree.data.intValue() > b) {
 			lowestAncestor(tree.left, a, b);
-		} else if (tree.data.intValue() < Math.min(a, b)) {
+		} else if (tree.data.intValue() < a && tree.data.intValue() < b) {
 			lowestAncestor(tree.right, a, b);
 		} else {
 			System.out.println("lowest ancestor:" + tree.data);
